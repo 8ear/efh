@@ -28,13 +28,15 @@ tags:
 - Planung und Nutzung von Leerrohren für die Installation der elektrischen Leitungen.
 2.4 Heizungsanschluss:
 - Planung des Anschlusses der Heizung an das elektrische System.
+2.5 Rolladen / Raffstore
+- Planung des Anschluss der Rollokasten an das elektrische System
 3. Installation:
 3.1 Leerrohre in Decken:
 - Installation der Leerrohre für die elektrischen Leitungen, die in den Decken verlaufen.
-3.2 Heizungsanschluss:
-- Anschluss der Heizung an das elektrische System.
-3.3 Zuleitungen:
+3.2 Zuleitungen:
 - Installation der Zuleitungen der Räume durch den Elektriker.
+3.3 Heizungsanschluss:
+- Anschluss der Heizung an das elektrische System.
 4. Abnahme und Prüfung:
 4.1 Steckdosen:
 - Fachgerechte Prüfung aller installierten Steckdosen.
