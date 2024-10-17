@@ -19,7 +19,11 @@ theme:
   name: readthedocs
   highlightjs: true
   hljs_languages:
-    - yaml  
+    - yaml
+  features:
+    - search.share
+    - search.highlight
+    - search.suggest
 plugins:
   - search
   - pdf-export:
@@ -31,5 +35,9 @@ plugins:
       fallback_to_build_date: false
       timezone: Europe/Berlin
       type: iso_date
+  # https://squidfunk.github.io/mkdocs-material/plugins/optimize/
+  - optimize
+  - tags:
+      tags_file: tags.md
 extra_css:
   - css/pdf-export.css
