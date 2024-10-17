@@ -1,0 +1,18 @@
+/* https://github.com/zhaoterryy/mkdocs-pdf-export-plugin */
+@page {
+    size: a4 portrait;
+    margin: 25mm 10mm 25mm 10mm;
+    counter-increment: page;
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    white-space: pre;
+    color: grey;
+    @top-left {
+        content: '© 2024 My Company';
+    }
+    @top-center {
+        content: string(chapter);
+    }
+    @top-right {
+        content: 'Page ' counter(page);
+    }
+}
