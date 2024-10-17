@@ -14,7 +14,11 @@ nav:
   - 'FLB Innentüren': flb_innentueren.md
   - 'FLB Garagentor': flb_garagentor.md
 theme:
-  name: material
+  #name: material
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml  
 plugins:
   - search
   - pdf-export:
