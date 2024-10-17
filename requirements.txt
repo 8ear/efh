@@ -6,6 +6,6 @@ pygments~=2.16
 pymdown-extensions~=10.2
 # 
 mkdocs-pdf-export-plugin~=0.5.10
-mkdocs-git-revision-plugin
+mkdocs-git-revision-date-localized-plugin
 #
 mkdocs-minify-plugin
