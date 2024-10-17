@@ -1,3 +1,8 @@
+# Credits to:
+# https://thomasthornton.cloud/2024/05/01/deploying-mkdocs-to-github-pages-with-github-actions/
+# https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-mkdocs
+# https://github.com/marketplace/actions/deploy-mkdocs
+
 name: Mkdocs 
 
 on:
@@ -10,9 +15,9 @@ on:
 
 env:
   # Use docker.io for Docker Hub if empty
-  REGISTRY: ghcr.io
+  #REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
+  #IMAGE_NAME: ${{ github.repository }}
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -21,27 +26,13 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
+  
     runs-on: ubuntu-latest
-    if: github.event.repository.fork == false
-    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       
       - uses: actions/setup-python@v5
         with:
@@ -64,16 +55,37 @@ jobs:
       
       - run: mkdocs gh-deploy --force
 
-      #- name: Setup Pages
-      #  uses: actions/configure-pages@v5
+  deploy:
+
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    if: github.event.repository.fork == false
+    
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
       
       # https://www.mkdocs.org/user-guide/deploying-your-docs/#other-providers
-      #- name: Upload artifact
-      #  uses: actions/upload-pages-artifact@v3
-      #  with:
-      #    # Upload entire repository
-      #    path: './site'
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.'
       
-      #- name: Deploy to GitHub Pages
-      #  id: deployment
-      #  uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
