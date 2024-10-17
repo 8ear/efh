@@ -62,7 +62,3 @@ tags:
 - Alle digitalen Informationen werden lokal bereitgestellt, die Nutzung von Cloud-Diensten ist ausgeschlossen
 6.7 Rauchmelder:
 - Installation der Rauchmeldern durch den Bauherrn.
-
-
-
-https://copilot.microsoft.com/?sendquery=1&FORM=SCCODX&showconv=1
