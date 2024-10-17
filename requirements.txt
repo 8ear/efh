@@ -9,3 +9,5 @@ mkdocs-pdf-export-plugin~=0.5.10
 mkdocs-git-revision-date-localized-plugin
 #
 mkdocs-minify-plugin
+# RSS
+mkdocs-rss-plugin
