@@ -11,3 +11,5 @@ mkdocs-git-revision-date-localized-plugin
 mkdocs-minify-plugin
 # RSS
 mkdocs-rss-plugin
+# SEO
+mkdocs-meta-descriptions-plugin

@@ -48,12 +48,12 @@ plugins:
       fallback_to_build_date: false
       timezone: Europe/Berlin
       type: iso_date
-  # https://squidfunk.github.io/mkdocs-material/plugins/optimize/
-  - optimize
   - tags:
       tags_file: tags.md
   # https://guts.github.io/mkdocs-rss-plugin/
   - rss
+  - meta-descriptions
+
 markdown_extensions:
   - smarty
   - toc:
