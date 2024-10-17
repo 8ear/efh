@@ -26,13 +26,10 @@ plugins:
       verbose: true
       media_type: print
       enabled_if_env: ENABLE_PDF_EXPORT
-  #- git_revision:
-      #show_time: true
-      #show_date: true
-      #show_branch: true
-      #show_commit: true
   - git-revision-date-localized:
+      # https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/options/
       fallback_to_build_date: false
-      type: timeago
+      timezone: Europe/Berlin
+      type: iso_date
 extra_css:
   - css/pdf-export.css
