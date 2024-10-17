@@ -67,11 +67,12 @@ jobs:
       #- name: Setup Pages
       #  uses: actions/configure-pages@v5
       
+      # https://www.mkdocs.org/user-guide/deploying-your-docs/#other-providers
       #- name: Upload artifact
       #  uses: actions/upload-pages-artifact@v3
       #  with:
       #    # Upload entire repository
-      #    path: '.'
+      #    path: './site'
       
       #- name: Deploy to GitHub Pages
       #  id: deployment
