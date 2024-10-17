@@ -3,6 +3,7 @@ site_name: EFH Planung
 site_description: 
 site_author: MH
 repo_url: https://github.com/8ear/efh/
+edit_uri: edit/main/docs/
 nav:
   - Home: index.md
   - About: about.md
