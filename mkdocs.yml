@@ -1,9 +1,31 @@
+# https://www.mkdocs.org/user-guide/configuration/
+site_name: EFH Planung
+site_description: 
+site_author: MH
+repo_url: https://github.com/8ear/efh/
+nav:
+  - Home: index.md
+  - About: about.md
+  - 'FLB Rohbau + Dach': flb_rohbau_dach.md
+  - 'FLB Heizung + Sanitär': flb_heizung_sanitaer.md
+  - 'FLB Elektro': flb_elektro.md
+  - 'FLB Putz + Malerarbeiten': flb_putz_maler.md
+  - 'FLB Fenster + Haustür': flb_fenster_haustuer
+  - 'FLB Innentüren': flb_innentueren.md
+  - 'FLB Garagentor': flb_garagentor.md
+theme:
+  name: material
 plugins:
   - search
   - pdf-export:
-        verbose: true
-        media_type: print
-        enabled_if_env: ENABLE_PDF_EXPORT
+      verbose: true
+      media_type: print
+      enabled_if_env: ENABLE_PDF_EXPORT
+  #- git_revision:
+      #show_time: true
+      #show_date: true
+      #show_branch: true
+      #show_commit: true
   - git-revision-date-localized:
       fallback_to_build_date: false
       type: timeago
