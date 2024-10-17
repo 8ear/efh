@@ -50,7 +50,7 @@ jobs:
             mkdocs-material-
 
       # https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions-insiders
-      - run: apt-get install pngquant
+      - run: sudo apt-get install pngquant
       
       - name: Install Python Packages
         run: pip install -r requirements.txt
