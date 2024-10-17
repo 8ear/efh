@@ -1,6 +1,6 @@
 ---
-title: Kosten
-summary: Diese Seite gibt einen Überblick der Kostenkalukation
+title: About
+summary: Diese Seite gibt einen Überblick über das Vorhaben.
 tags:
   - FLB
   - 'Funktionale Leistungsbeschreibung'
