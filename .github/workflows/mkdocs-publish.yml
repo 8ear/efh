@@ -29,7 +29,7 @@ concurrency:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -58,7 +58,7 @@ jobs:
             mkdocs-material-
 
       # https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions-insiders
-      - run: sudo apt-get install pngquant
+      - run: sudo apt-get install -y pngquant
       
       - name: Install Python Packages
         run: pip install -r requirements.txt
