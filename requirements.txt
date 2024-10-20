@@ -1,0 +1,15 @@
+mkdocs~=1.6
+mkdocs-material~=9.0.0
+jinja2~=3.0
+markdown~=3.2
+pygments~=2.16
+pymdown-extensions~=10.2
+# 
+mkdocs-pdf-export-plugin~=0.5.10
+mkdocs-git-revision-date-localized-plugin
+#
+mkdocs-minify-plugin
+# RSS
+mkdocs-rss-plugin
+# SEO
+mkdocs-meta-descriptions-plugin

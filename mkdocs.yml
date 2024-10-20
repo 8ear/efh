@@ -1,0 +1,64 @@
+# https://www.mkdocs.org/user-guide/configuration/
+
+#site_name: required. Used as feed mandatory channel title and items source URL label.
+site_name: EFH Planung
+#site_description: required. Used as feed mandatory channel description.
+site_description: |
+  Dieses Repository beinhaltet meine Planungen, Überlegungen und Funktionale Leistungsbeschreibungen in mkdocs Dokumentationen. Erreichbar über: https://bau.haeckl.eu
+#site_url: required. Used to build feed items URLs.
+site_url: https://bau.haeckl.eu
+site_author: MH
+repo_url: https://github.com/8ear/efh/
+edit_uri: edit/main/docs/
+nav:
+  - Home: index.md
+  - About: about.md
+  - 'FLB Rohbau + Dach': flb_rohbau_dach.md
+  - 'FLB Heizung + Sanitär': flb_heizung_sanitaer.md
+  - 'FLB Elektro': flb_elektro.md
+  - 'FLB Putz + Malerarbeiten': flb_putz_maler.md
+  - 'FLB Fenster + Haustür': flb_fenster_haustuer.md
+  - 'FLB Innentüren': flb_innentueren.md
+  - 'FLB Garagentor': flb_garagentor.md
+  - 'FLB PV': flb_pv.md
+  - 'Zusätzliches': additional.md
+  - Kostenkalukation: costs.md
+theme:
+  #name: material
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+  locale: de
+  features:
+    - search.share
+    - search.highlight
+    - search.suggest
+plugins:
+  - search:
+      min_search_length: 2
+      #lang: de
+      indexing: 'full'
+  - pdf-export:
+      verbose: true
+      media_type: print
+      enabled_if_env: ENABLE_PDF_EXPORT
+  - git-revision-date-localized:
+      # https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/options/
+      fallback_to_build_date: false
+      timezone: Europe/Berlin
+      type: iso_date
+  #- tags:
+  #    tags_file: tags.md
+  # https://guts.github.io/mkdocs-rss-plugin/
+  - rss
+  - meta-descriptions
+markdown_extensions:
+  - smarty
+  - toc:
+      permalink: true
+      separator: "_"
+extra_css:
+  - css/pdf-export.css
+extra:
+  generator: false
